@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+    laravelCrudApi:
+        container_name: laravel-crud-api-container
+        image: laravel-crud-api
+        build: .
+        ports:
+            - "8000:8000"
+        depends_on:
+            - db
+    db:
+        container_name: db-crud-api
+        image: postgres:16
+        ports:
+            - "5432:5432"
+        environment:
+            - POSTGRES_USER=${DB_USERNAME}
+            - POSTGRES_PASSWORD=${DB_PASSWORD}
+            - POSTGRES_DB=${DB_DATABASE}
+        volumes:
+            - db-data:/var/lib/postgresql/data
+volumes:
+    db-data: {}
