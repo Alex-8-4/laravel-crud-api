@@ -17,8 +17,8 @@ To create a new worker, make a POST request to localhost:8000/api/workers
 The body of the request:
 ```
 {
-    "name": "Михаил Селиванов",
-    "email": "m.selivanov@intensa.ru",
+    "name": "Александр",
+    "email": "test@intensa.ru",
     "phone": "+71111111111"
 }
 ```
@@ -34,9 +34,9 @@ For example GET request to localhost:8000/api/workers/1
 ```
 {
 	"id": 3,
-	"name": "Михаил Селиванов",
+	"name": "Александр",
 	"phone": "+71111111111",
-	"email": "m.selivanov@intensa.ru",
+	"email": "test@intensa.ru",
 	"created_at": "2024-09-08T15:51:20.000000Z",
 	"updated_at": "2024-09-08T15:51:20.000000Z"
 }
